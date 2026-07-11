@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Pendaftaran</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+
+<div class="box-form">
+    <h2 class="judul center">📄 Form Pendaftaran</h2>
+
+    <form id="formDaftar" action="#" method="post">
+        <div class="form-group">
+            <label>Nama Lengkap</label>
+            <input type="text" name="nama" required>
+        </div>
+        
+        <div class="form-group">
+        <select name="kelas" required>
+    <option value="" selected disabled>-- Pilih Kelas --</option>
+
+    <option value="VII A">VII A</option>
+    <option value="VII B">VII B</option>
+    <option value="VII C">VII C</option>
+    <option value="VII D">VII D</option>
+    <option value="VII E">VII E</option>
+    <option value="VII F">VII F</option>
+    <option value="VII G">VII G</option>
+    <option value="VII H">VII H</option>
+    <option value="VII I">VII I</option>
+    <option value="VII J">VII J</option>
+    <option value="VII K">VII K</option>
+
+    <option value="VIII A">VIII A</option>
+    <option value="VIII B">VIII B</option>
+    <option value="VIII C">VIII C</option>
+    <option value="VIII D">VIII D</option>
+    <option value="VIII E">VIII E</option>
+    <option value="VIII F">VIII F</option>
+    <option value="VIII G">VIII G</option>
+    <option value="VIII H">VIII H</option>
+    <option value="VIII I">VIII I</option>
+    <option value="VIII J">VIII J</option>
+    <option value="VIII K">VIII K</option>
+</select>
+        </div>
+<div class="radio-group">
+    <label>Jenis Kelamin</label>
+
+    <div class="radio-group">
+        <label><input type="radio" name="jk" value="Laki-laki" required > Laki-laki</label>
+
+        <label><input type="radio" name="jk" value="Perempuan"> Perempuan</label>
+    </div>
+</div>
+        
+
+        <div class="form-group">
+            <label>Tanggal Lahir</label>
+            <input type="date" name="tgl_lahir">
+        </div>
+
+        <div class="form-group">
+            <label>No. HP</label>
+            <input type="tel" name="hp" required minlength="10">
+        </div>
+
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" required placeholder="example@gmail.com">
+        </div>
+
+        <div class="form-group">
+            <label>Alamat</label>
+            <input type="text" name="alamat" required>
+        </div>
+
+
+        <div class="form-group">
+            <label>Harapan</label><br>
+            <textarea name="pesan" rows="4" cols="30"></textarea>
+        </div>
+
+        <button type="submit">KIRIM</button>
+    </form>
+
+ <div id="hasilData">
+    <h3>Data yang Dikirim:</h3>
+    <pre id="output"></pre>
+</div>
+
+
+
+</div>
+  <script src="apalah.js"></script>
+</body>
+</html>
