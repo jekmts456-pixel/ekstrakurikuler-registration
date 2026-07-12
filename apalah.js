@@ -29,7 +29,7 @@ Pesan: ${data.pesan}
     document.getElementById("output").textContent = hasilTeks;
     document.getElementById("hasilData").style.display = "block";
 
-    fetch("https://script.google.com/macros/s/AKfycby3ufXtLeO404huKrkbipgDN8FC6VQRVTZkFrQ858lUe6N-cwoEcY1KZMzIgfUI83H0lg/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbxOnxtJSZ3F_CSAG56mRXPt9BokdAY4xuuN0Ad-V3CiMZVPNwTRYMqL0EPwgBuW9Gtfig/exec", {
         method: "POST",
         mode: "no-cors",
         headers: {
