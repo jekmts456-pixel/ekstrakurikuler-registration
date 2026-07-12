@@ -29,9 +29,9 @@ body::before{
         }
         
         .box-form{
-    width:95%;
-    max-width:none;
-    padding:40px;
+    width:90%;
+    max-width:900px;
+    padding:20px;
 
     background: rgba(25,25,35,.55);
     backdrop-filter: blur(15px);
