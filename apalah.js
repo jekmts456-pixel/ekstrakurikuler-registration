@@ -1,5 +1,3 @@
-alert("JS berhasil dimuat");
-
 document.getElementById("formDaftar").addEventListener("submit", function (event) {
     event.preventDefault();
   const tombol = document.querySelector("button");
