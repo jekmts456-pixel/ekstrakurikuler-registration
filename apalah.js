@@ -1,19 +1,24 @@
 document.getElementById("formDaftar").addEventListener("submit", function (event) {
+
     event.preventDefault();
-  const tombol = document.querySelector("button");
-tombol.disabled = true;
-tombol.textContent = "Mengirim...";
 
-    const formData = new FormData(event.target);if (data.hp.length < 10) {
-    alert("Nomor HP minimal 10 digit!");
+    const tombol = document.querySelector("button");
 
-    tombol.disabled = false;
-    tombol.textContent = "KIRIM";
+    tombol.disabled = true;
+    tombol.textContent = "Mengirim...";
 
-    return;
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData.entries());
 
-    const data = Object.fromEntries(formData.entries()); 
-}
+    if (data.hp.length < 10) {
+
+        alert("Nomor HP minimal 10 digit!");
+
+        tombol.disabled = false;
+        tombol.textContent = "KIRIM";
+
+        return;
+    }
 
     const hasilTeks = `
 Nama: ${data.nama}
@@ -37,19 +42,27 @@ Pesan: ${data.pesan}
         },
         body: JSON.stringify(data)
     })
+
     .then(() => {
+
         alert("Data berhasil dikirim!");
-        
+
+        event.target.reset();
+
+        tombol.disabled = false;
+        tombol.textContent = "KIRIM";
+
     })
-    
+
     .catch((error) => {
-    console.log(error);
 
-    tombol.disabled = false;
-    tombol.textContent = "KIRIM";
+        console.log(error);
 
-    alert("Gagal mengirim data.");
-})
+        tombol.disabled = false;
+        tombol.textContent = "KIRIM";
 
-event.target.reset();
+        alert("Gagal mengirim data.");
+
+    });
+
 });
