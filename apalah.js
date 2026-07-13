@@ -13,7 +13,7 @@ tombol.textContent = "Mengirim...";
     tombol.textContent = "KIRIM";
 
     return;
-}
+
     const data = Object.fromEntries(formData.entries()); 
 }
 
