@@ -12,9 +12,9 @@ document.getElementById("formDaftar").addEventListener("submit", function (event
         tombol.disabled = false;
         tombol.textContent = "KIRIM";
         return;
-    }
+    };
 
-    fetch("https://script.google.com/macros/s/AKfycbxOnxtJSZ3F_CSAG56mRXPt9BokdAY4xuuN0Ad-V3CiMZVPNwTRYMqL0EPwgBuW9Gtfig/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbz788CNJLca_irXvp6cUViGFJfI4UGAUssORTqCKDxCpDGika7BRcMIq-ZViKbpKGHO-w/exec", {
         method: "POST",
         body: new URLSearchParams(formData)
     })
