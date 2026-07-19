@@ -54,14 +54,8 @@ Pesan: ${data.pesan}
     })
 
     .catch((error) => {
-
-        console.log(error);
-
-        tombol.disabled = false;
-        tombol.textContent = "KIRIM";
-
-        alert("Gagal mengirim data.");
-
-    });
-
+    console.error(error);
+    alert(error.message);
+});
+    
 });
